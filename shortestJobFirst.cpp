@@ -108,25 +108,4 @@ int main()
     cout<<"\n                      Average Waiting Time        : "<<wait_avg<<"\n";
     
     
-    for(int i=0; i<num; i++) 
-    { 
-        process[i][2]+2; 
-    }     
-    arrangeArrival(num, process); 
-    completionTime(num, process); 
-    cout<<" \n\n                                     If checking and arranging time is 2 seconds\n"; 
-    cout<<"Process ID || Arrival Time || Burst Time || Waiting Time || Turnaround Time\n"; 
-    cout<<"**********************************************************************************\n";
-    for(int i=0; i<num; i++) 
-    { 
-        cout<<process[i][0]<<"\t\t"<<process[i][1]<<"\t\t"<<process[i][2]<<"\t\t"<<process[i][4]<<"\t\t"<<process[i][5]<<"\n"; 
-        wait_total = wait_total+process[i][4];
-        turn_total = turn_total+process[i][5];
-    } 
-    
-    wait_avg=wait_total/num;
-	turn_avg=turn_total/num;
-	cout<<"\n                      Average Turn Around Time    : "<<turn_avg<<"\n";
-    cout<<"\n                      Average Waiting Time        : "<<wait_avg<<"\n";
-	
 } 
